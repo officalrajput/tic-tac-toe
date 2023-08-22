@@ -1,0 +1,136 @@
+ @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Poppins:ital,wght@0,700;1,300;1,500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: 'IBM Plex Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    background-color: rgb(38, 2, 38);;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+ul{
+    color: rgb(186, 169, 186);
+    font-size: x-large;
+    font-weight: bold;
+    padding: 10px;    
+}
+
+.container
+{
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.left-game-container
+{
+    position: relative;
+    margin-top: 3vh;
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+}
+.box
+{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.box:hover{
+    background-color: rgb(248, 199, 248);
+}
+.right-game-container
+{
+    margin-top: 3vh;
+    margin-left: 3vw;
+}
+.sub-heading
+{
+    display: flex;
+    justify-content: center;
+}
+#reset
+{
+    margin-left: 3vw;
+    padding: 5px 10px;
+    letter-spacing: 2px;
+    background-color: antiquewhite;
+    border: none;
+    cursor: pointer;
+    color: rgb(1, 37, 49);   
+}
+#reset:hover
+{
+    border: 1px solid black;
+    background-color: rgb(77, 117, 130);
+}
+
+.winner-image , img
+{
+    visibility: hidden;
+    /* transition: visibility  1s ease-in-out; */
+    animation: ranu 3s ease-in-out linear;
+}
+@keyframes ranu {
+  0%{
+filter: drop-shadow(10px 10px 2px green);
+  }
+  50%{
+    filter: drop-shadow(10px 10px 2px red);
+  }
+  100%
+  {
+    filter: drop-shadow(10px 10px 2px blue);
+
+  }
+  }
+    
+
+
+.bt-0{
+    border-top: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.br-0{
+    border-right: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+@media screen and (max-width:450px){
+    .container{
+        flex-wrap: wrap;
+    }
+    .right-game-container h2
+    {
+        text-align: center;
+        margin: 10px;
+     font-size: 10px;
+    }
+    /* .winner-image img{
+        width: 100px;
+    } */
+    
+}
+
+.line{
+    background-color: black;
+    width: 0;
+    height: 3px;
+    position:absolute;
+    transition: width 1s ease-in;
+}
